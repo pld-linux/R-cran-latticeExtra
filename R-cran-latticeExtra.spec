@@ -1,13 +1,14 @@
 %define		fversion	%(echo %{version} |tr r -)
 %define		modulename	latticeExtra
+%undefine	_debugsource_packages
 Summary:	Extra Graphical Utilities Based on Lattice
 Name:		R-cran-%{modulename}
-Version:	0.6r26
-Release:	2
+Version:	0.6r31
+Release:	1
 License:	GPL v2+
 Group:		Applications/Math
-Source0:	ftp://stat.ethz.ch/R-CRAN/src/contrib/%{modulename}_%{fversion}.tar.gz
-# Source0-md5:	f17954ceb5333c1a9bd7fe3f175aac6c
+Source0:	https://cran.r-project.org/src/contrib/%{modulename}_%{fversion}.tar.gz
+# Source0-md5:	355ce56f2895fd791612a698f0404000
 URL:		http://latticeextra.r-forge.r-project.org/
 BuildRequires:	R >= 2.8.1
 Requires(post,postun):	R >= 2.8.1
